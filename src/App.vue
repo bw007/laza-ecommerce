@@ -1,10 +1,36 @@
 <script setup lang="ts">
-import { Button } from '@/components/ui/button'
+import { onMounted, ref } from 'vue';
+import SplashScreen from './components/onboarding/SplashScreen.vue';
+import AppLoader from './components/ui/common/AppLoader.vue';
+import { RouterView } from 'vue-router';
+
+const showSplash = ref(true);
+const isLoading = ref(true)
+
+onMounted(() => {
+  const hasSeenSplash = sessionStorage.getItem('has-seen-splash')
+
+  if (hasSeenSplash) {
+    showSplash.value = false;
+
+    setTimeout(() => {
+      isLoading.value = false;
+    }, 2000);
+  } else {
+    setTimeout(() => {
+      showSplash.value = false;
+      setTimeout(() => {
+        isLoading.value = false;
+      }, 2000);
+      sessionStorage.setItem('has-seen-splash', 'true');
+    }, 3000);
+  }
+});
+
 </script>
 
 <template>
-  <header>
-    <h1 class="text-orange-600">Hello World</h1>
-    <Button>Click me</Button>
-  </header>
+  <SplashScreen v-if="true" />
+  <AppLoader v-else-if="isLoading" />
+  <RouterView v-else />
 </template>
