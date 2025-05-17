@@ -5,7 +5,7 @@
     <img
       src="@/assets/images/logo.svg"
       alt="Logo"
-      class="w-28 h-auto opacity-0 scale-90 animate-fade-in"
+      class="sm:w-28 h-auto opacity-0 scale-90 animate-fade-in"
     />
   </div>
 </template>
