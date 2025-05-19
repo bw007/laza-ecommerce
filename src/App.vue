@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { onMounted, ref } from 'vue';
 import SplashScreen from './components/onboarding/SplashScreen.vue';
-import AppLoader from './components/ui/common/AppLoader.vue';
+import AppLoader from './components/common/AppLoader.vue';
 import { RouterView } from 'vue-router';
 
 const showSplash = ref(true);
@@ -30,7 +30,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <SplashScreen v-if="true" />
+  <SplashScreen v-if="showSplash" />
   <AppLoader v-else-if="isLoading" />
   <RouterView v-else />
 </template>
