@@ -12,9 +12,15 @@ const route = useRoute();
 
 const activeTab = ref(route.path);
 
-watch(route.path, (newPath) => {
+watch(() => route.path, (newPath) => {
   activeTab.value = newPath;
-});
+}, { immediate: true });
+
+const onTabChange = (value: string) => {
+  if (value !== route.path) {
+    router.push(value);
+  }
+};
 
 const iconMap = {
   House,
@@ -27,24 +33,29 @@ const getIconComponent = (iconName: string) => {
   return iconMap[iconName as keyof typeof iconMap] || House;
 };
 
-const goTo = (path: string) => {
-  router.push(path)
-};
-
 </script>
 
 <template>
-  <Tabs default-value="home" class="w-full h-20 bg-white">
+  <Tabs
+    :default-value="route.path"
+    class="w-full h-20 bg-white"
+    v-model="activeTab"
+    @update:model-value="onTabChange as any"
+  >
     <TabsList class="flex justify-between w-full h-full bg-white">
       <TabsTrigger
         v-for="nav in mainRoutes"
         :key="nav.path"
         :value="nav.path"
-        class="rounded-lg flex flex-col items-center justify-center"
-        @click="goTo(nav.path)"
+        class="rounded-none flex flex-col items-center justify-center"
       >
-        <component :is="getIconComponent(nav.meta.icon)" :size="18" />
-        <span class="text-[11px]">{{ nav.name }}</span>
+        <component
+          v-if="activeTab !== nav.path"
+          :is="getIconComponent(nav.meta.icon)"
+          :size="18"
+          class="text-muted-foreground"
+        />
+        <span v-else class="text-[11px] text-primary">{{ nav.name }}</span>
       </TabsTrigger>
     </TabsList>
   </Tabs>
