@@ -31,6 +31,6 @@ onMounted(() => {
 
 <template>
   <SplashScreen v-if="showSplash" />
-  <AppLoader v-else-if="isLoading" />
+  <AppLoader v-else-if="false" />
   <RouterView v-else />
 </template>
