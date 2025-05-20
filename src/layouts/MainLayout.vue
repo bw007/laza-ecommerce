@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import BottomNav from '@/components/layout/BottomNav.vue';
+import BottomNav from '@/components/layout/TheBottomNav.vue';
 import TheHeader from '@/components/layout/TheHeader.vue';
 
 </script>
