@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import Button from '../ui/button/Button.vue';
 import {
   Sheet,
   SheetContent,
@@ -12,8 +13,13 @@ import {
 
 <template>
   <Sheet>
-    <SheetTrigger class="w-12 h-12 bg-background rounded-full flex items-center justify-center active:opacity-65">
-      <img src="@/assets/images/bar-icon.svg" alt="Menu">
+    <SheetTrigger>
+      <Button
+        variant="outline"
+        class="w-12 h-12 !p-2 border-none bg-background rounded-full flex items-center justify-center active:opacity-75"
+      >
+        <img src="@/assets/images/bar-icon.svg" alt="Menu">
+      </Button>
     </SheetTrigger>
     <SheetContent side="left" class="py-11 px-5">
       <SheetHeader>
