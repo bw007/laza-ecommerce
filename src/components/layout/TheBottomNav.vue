@@ -42,7 +42,7 @@ const bottomNavRoutes = computed(() =>
 <template>
   <Tabs
     :default-value="route.path"
-    class="w-full h-20 bg-white"
+    class="w-full h-20 bg-white fixed bottom-0 left-0 right-0"
     v-model="activeTab"
     @update:model-value="onTabChange as any"
   >
