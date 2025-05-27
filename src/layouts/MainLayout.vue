@@ -1,17 +1,15 @@
 <script setup lang="ts">
-import BottomNav from '@/components/layout/TheBottomNav.vue';
+import TheBottomNav from '@/components/layout/TheBottomNav.vue';
 import TheHeader from '@/components/layout/TheHeader.vue';
-import TheSidebar from '@/components/layout/TheSidebar.vue';
 
 </script>
 
 <template>
-  <div class="flex flex-col h-screen">
+  <div class="flex flex-col">
     <TheHeader />
-    <TheSidebar />
-    <div class="flex-1">
+    <div class="flex-1 h-full mb-20">
       <RouterView />
     </div>
-    <BottomNav class="sm:hidden" />
+    <TheBottomNav class="sm:hidden" />
   </div>
 </template>
