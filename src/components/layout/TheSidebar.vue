@@ -15,9 +15,11 @@ import {
     <SheetTrigger class="w-12 h-12 bg-background rounded-full flex items-center justify-center active:opacity-65">
       <img src="@/assets/images/bar-icon.svg" alt="Menu">
     </SheetTrigger>
-    <SheetContent>
+    <SheetContent side="left" class="py-11 px-5">
       <SheetHeader>
-        <SheetTitle>Are you absolutely sure?</SheetTitle>
+        <SheetTitle>
+          <img src="@/assets/images/logo.svg" alt="Logo">
+        </SheetTitle>
         <SheetDescription>
           This action cannot be undone. This will permanently delete your account
           and remove your data from our servers.
