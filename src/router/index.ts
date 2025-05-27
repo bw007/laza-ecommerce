@@ -6,8 +6,8 @@ const router = createRouter({
   routes: [
     {
       path: '/',
-      name: 'MainLayout',
-      component: () => import('@/layouts/MainLayout.vue'),
+      name: 'BaseLayout',
+      component: () => import('@/layouts/BaseLayout.vue'),
       children: routes
     }
   ]
