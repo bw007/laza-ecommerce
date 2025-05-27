@@ -1,5 +1,11 @@
-import mainRoutes from "./routes/main";
+import main from "./routes/main";
 
 export const routes = [
-  ...mainRoutes,
+  {
+    path: '',
+    meta: {
+      layout: 'main'
+    },
+    children: main
+  }
 ]
