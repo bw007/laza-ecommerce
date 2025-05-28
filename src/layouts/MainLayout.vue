@@ -22,7 +22,7 @@ console.log(200);
       @menu-click="openSidebar"
       @filter-click="openFilter"
     />
-    <div class="flex-1 h-full mb-20">
+    <div class="mb-20">
       <RouterView />
     </div>
     <TheBottomNav class="sm:hidden" />

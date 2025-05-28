@@ -35,7 +35,7 @@ const props = {
 </script>
 
 <template>
-  <header class="fixed top-0 left-0 right-0 z-50 flex bg-[#00000030] items-center justify-between p-5">
+  <header class="sticky top-0 z-50 bg-white/50 backdrop-blur-sm left-0 right-0 flex items-center justify-between p-5 pt-11">
     <div class="flex items-center">
       <Button
         v-if="showBack"
@@ -58,7 +58,7 @@ const props = {
         v-if="showFilter"
         @click="props.onFilterClick"
         variant="outline"
-        class="w-12 h-12 !p-2 border-none bg-background rounded-full flex items-center justify-center active:opacity-75"
+        class="w-12 h-12 !p-2 border-none bg-background hover:bg-neutral-200 hover:text-inherit rounded-full flex items-center justify-center active:opacity-75"
       >
         <FilterIcon :size="24" :stroke-width="1.6" />
       </Button>
