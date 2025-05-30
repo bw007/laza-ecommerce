@@ -13,12 +13,13 @@
     "format": "prettier --write src/"
   },
   "dependencies": {
+    "@fontsource/inter": "^5.2.5",
     "@tailwindcss/vite": "^4.1.6",
     "@vueuse/core": "^13.3.0",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "lucide-vue-next": "^0.510.0",
-    "reka-ui": "^2.2.1",
+    "reka-ui": "^2.3.0",
     "tailwind-merge": "^3.3.0",
     "tailwindcss": "^4.1.6",
     "tw-animate-css": "^1.2.9",
