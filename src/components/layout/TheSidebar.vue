@@ -14,7 +14,7 @@ import {
 <template>
   <Sheet>
     <SheetTrigger>
-      <Button variant="outline" class="w-12 h-12 !p-2 border-none bg-background hover:bg-neutral-200 rounded-full flex items-center justify-center active:opacity-75">
+      <Button variant="outline" class="w-12 h-12 !p-2 border-none bg-background hover:bg-neutral-200 rounded-full flex items-center justify-center">
         <img src="@/assets/images/bar-icon.svg" alt="Menu">
       </Button>
     </SheetTrigger>

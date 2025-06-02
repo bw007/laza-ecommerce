@@ -41,7 +41,7 @@ const props = {
         v-if="showBack"
         @click="props.onBackClick"
         variant="outline"
-        class="w-12 h-12 !p-2 border-none bg-background rounded-full flex items-center justify-center active:opacity-75"
+        class="w-12 h-12 !p-2 border-none bg-background rounded-full flex items-center justify-center"
       >
         <ArrowLeft :size="24" :stroke-width="1.6" />
       </Button>
@@ -58,7 +58,7 @@ const props = {
         v-if="showFilter"
         @click="props.onFilterClick"
         variant="outline"
-        class="w-12 h-12 !p-2 border-none bg-background hover:bg-neutral-200 hover:text-inherit rounded-full flex items-center justify-center active:opacity-75"
+        class="w-12 h-12 !p-2 border-none bg-background hover:bg-neutral-200 hover:text-inherit rounded-full flex items-center justify-center"
       >
         <FilterIcon :size="24" :stroke-width="1.6" />
       </Button>
@@ -67,7 +67,7 @@ const props = {
         v-if="showCart"
         @click="props.onCartClick"
         variant="outline"
-        class="w-12 h-12 !p-2 border-none bg-background rounded-full flex items-center justify-center active:opacity-75"
+        class="w-12 h-12 !p-2 border-none bg-background rounded-full flex items-center justify-center"
       >
         <ShoppingBag :size="24" :stroke-width="1.6" />
       </Button>
