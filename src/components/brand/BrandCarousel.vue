@@ -15,7 +15,7 @@ const emit = defineEmits<{
 
 <template>
   <Carousel
-    class="relative w-full max-w-fitd"
+    class="relative w-full max-w-fit"
     :opts="{
       align: 'start',
     }"

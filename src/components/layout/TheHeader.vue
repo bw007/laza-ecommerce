@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ArrowLeft, FilterIcon, ShoppingBag } from 'lucide-vue-next';
+import { ArrowLeft, FilterIcon, ShoppingBag, } from 'lucide-vue-next';
 import TheSidebar from './TheSidebar.vue';
 import { useRouter } from 'vue-router';
 import Button from '../ui/button/Button.vue';
@@ -12,6 +12,12 @@ interface Props {
   showFilter?: boolean
   showCart?: boolean
   title?: string
+  selectedBrand?: {
+    logo?: string
+    name?: string
+  }
+  showBrandSelector?: boolean
+  onBrandSelectorClick?: () => void
   onBackClick?: () => void
   onMenuClick?: () => void
   onFilterClick?: () => void
@@ -26,6 +32,9 @@ const props = {
   showFilter: rawProps.showFilter ?? false,
   showCart: rawProps.showCart ?? false,
   title: rawProps.title ?? '',
+  showBrandSelector: rawProps.showBrandSelector ?? false,
+  selectedBrand: rawProps.selectedBrand ?? null,
+  onBrandSelectorClick: rawProps.onBrandSelectorClick ?? (() => console.log('Brand selector clicked')),
   onBackClick: rawProps.onBackClick ?? (() => router.back()),
   onMenuClick: rawProps.onMenuClick ?? (() => console.log('Menu clicked')),
   onFilterClick: rawProps.onFilterClick ?? (() => console.log('Filter clicked')),
@@ -50,7 +59,21 @@ const props = {
     </div>
 
     <div class="flex-1 text-center">
-      <h1 v-if="title" class="text-lg font-semibold">{{ title }}</h1>
+
+      <Button
+        v-if="rawProps.showBrandSelector && rawProps.selectedBrand"
+        @click="rawProps.onBrandSelectorClick"
+        class="flex items-center justify-center space-x-2 hover:bg-gray-100 rounded-lg px-3 py-1 transition-colors mx-auto"
+      >
+        <img
+          v-if="rawProps.selectedBrand.logo"
+          :src="rawProps.selectedBrand.logo"
+          :alt="rawProps.selectedBrand.name"
+          class="w-8 h-8"
+        />
+      </Button>
+
+      <h1 v-else-if="title" class="text-lg font-semibold">{{ title }}</h1>
     </div>
 
     <div class="flex items-center space-x-2">
