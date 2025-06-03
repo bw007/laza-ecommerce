@@ -32,9 +32,9 @@ defineProps<{
         <CarouselItem
           v-for="product in products"
           :key="product.id"
-          class="basis-1/2"
+          class="basis-1/2 sm:basis-1/3 md:basis-1/4 lg:basis-1/5 xl:basis-1/6 2xl:basis-auto"
         >
-          <ProductCard :product="product" class="w-full" />
+          <ProductCard :product="product" class="w-full xl:max-w-64" />
         </CarouselItem>
       </CarouselContent>
     </Carousel>
