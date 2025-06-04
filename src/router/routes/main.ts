@@ -10,9 +10,9 @@ export default [
     }
   },
   {
-    path: '/brands',
-    name: 'Brands',
-    component: () => import('@/views/BrandsView.vue'),
+    path: '/categories',
+    name: 'Categories',
+    component: () => import('@/views/CategoriesView.vue'),
     meta: {
       icon: 'Tags',
       bottomNav: true,
