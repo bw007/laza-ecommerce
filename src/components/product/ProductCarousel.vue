@@ -16,7 +16,7 @@ defineProps<{
   <div class="flex flex-col gap-2">
     <div class="flex items-center justify-between gap-2">
       <h4 class="text-base font-medium">{{ title }}</h4>
-      <router-link to="/all-items">
+      <router-link :to="goTo">
         <Button variant="link" size="sm" class="px-0 text-sm text-muted-foreground hover:text-foreground" asChild>
           <span>View All</span>
         </Button>
