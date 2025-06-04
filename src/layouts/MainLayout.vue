@@ -7,20 +7,14 @@ console.log(100);
 
 }
 
-const openFilter = () => {
-console.log(200);
-
-}
-
 </script>
 
 <template>
   <div class="flex flex-col">
     <TheHeader
       :show-menu="true"
-      :show-filter="true"
+      :show-cart="true"
       @menu-click="openSidebar"
-      @filter-click="openFilter"
     />
     <div class="mb-20 px-5">
       <RouterView />
