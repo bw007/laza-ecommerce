@@ -1,7 +1,12 @@
 <script setup lang="ts">
 import TheBottomNav from '@/components/layout/TheBottomNav.vue';
 import TheHeader from '@/components/layout/TheHeader.vue';
+import { onMounted } from 'vue';
 
+onMounted(() => {
+  console.log(100);
+
+})
 const openSidebar = () => {
 console.log(100);
 
