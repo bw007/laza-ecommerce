@@ -2,6 +2,7 @@
 import { computed } from 'vue';
 import { useRoute } from 'vue-router';
 import MainLayout from './MainLayout.vue';
+import ProductsGridLayout from './ProductsGridLayout.vue';
 
 const route = useRoute()
 const currentLayout = computed(() => {
@@ -10,6 +11,7 @@ const currentLayout = computed(() => {
 
 const layoutComponents = {
   'main': MainLayout,
+  'products-grid': ProductsGridLayout
 }
 
 </script>
