@@ -115,7 +115,7 @@ const handleSearch = async (query: string) => {
     <p class="text-muted-foreground text-[15px] ">Welcome to Laza.</p>
   </div>
   <SearchBar
-    class="mt-5"
+    class="mt-5 sticky top-28 z-10 bg-white py-1"
     :search-results="searchResults"
     :recent-searches="recentSearches"
     :popular-searches="popularSearches"
@@ -130,6 +130,18 @@ const handleSearch = async (query: string) => {
     class="mt-5"
     :products="newArrivalProducts"
     title="New Arraival"
+    go-to="/products/new-arravial"
+  />
+  <ProductCarousel
+    class="mt-5"
+    :products="newArrivalProducts"
+    title="Best Selling"
     go-to="/all-items"
+  />
+  <ProductCarousel
+    class="mt-5"
+    :products="newArrivalProducts"
+    title="Special Offers"
+    go-to="/special-offers"
   />
 </template>
