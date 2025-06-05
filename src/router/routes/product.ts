@@ -1,18 +1,34 @@
 export default [
   {
-    path: 'new-arravials',
+    path: 'new-arravial',
     name: 'NewArravial',
-    component: () => import('@/views/products/NewArrivalView.vue'),
+    component: () => import('@/views/product/NewArrivalView.vue'),
     meta: {
       title: 'Products'
     }
   },
-  // {
-  //   path: ':id',
-  //   name: 'ProductDetail',
-  //   component: () => import('@/pages/product/ProductDetail.vue'),
-  //   meta: {
-  //     title: 'Product Detail'
-  //   }
-  // }
+  {
+    path: 'best-selling',
+    name: 'BestSelling',
+    component: () => import('@/views/product/BestSellingView.vue'),
+    meta: {
+      title: 'Best Selling'
+    }
+  },
+  {
+    path: 'special-offers',
+    name: 'SpecialOffers',
+    component: () => import('@/views/product/SpecialOffersView.vue'),
+    meta: {
+      title: 'Special Offers'
+    }
+  },
+  {
+    path: ':id',
+    name: 'ProductDetail',
+    component: () => import('@/views/product/ProductDetail.vue'),
+    meta: {
+      title: 'Product Detail'
+    }
+  }
 ]
