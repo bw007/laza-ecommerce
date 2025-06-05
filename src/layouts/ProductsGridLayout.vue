@@ -3,20 +3,17 @@ import TheHeader from '@/components/layout/TheHeader.vue';
 import { onMounted } from 'vue';
 
 onMounted(() => {
-  console.log(100);
-  
+  console.log("Grid layout");
+
 })
 
-const backHandler = () => {
-  console.log("Back");
-}
 </script>
 
 <template>
   <div class="flex flex-col">
     <TheHeader
       :show-back="true"
-      @back-click="backHandler"
+      :show-cart="true"
     />
     <div class="mb-20 px-5">
       <RouterView />

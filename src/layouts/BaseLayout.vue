@@ -10,12 +10,12 @@ const currentLayout = computed(() => {
   return route.meta?.layout || 'main'
 })
 onMounted(() => {
-  console.log(100);
+  console.log(currentLayout.value);
 
 })
 const layoutComponents = {
   'main': MainLayout,
-  'product': ProductsGridLayout
+  'products-grid': ProductsGridLayout
 }
 
 </script>

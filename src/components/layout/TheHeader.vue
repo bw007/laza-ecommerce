@@ -46,10 +46,16 @@ const props = {
         variant="outline"
         class="w-12 h-12 opacity-85 !p-2 border-none bg-background rounded-full flex items-center justify-center"
       >
-        <ArrowLeft :size="24" :stroke-width="1.6" />
+        <ArrowLeft
+          class="size-5"
+          :stroke-width="1.6"
+        />
       </Button>
 
-      <TheSidebar v-if="showMenu" @click="props.onMenuClick" />
+      <TheSidebar
+        v-if="showMenu"
+        @click="props.onMenuClick"
+      />
     </div>
 
     <div class="flex-1 text-center">
@@ -63,7 +69,6 @@ const props = {
         class="w-12 h-12 !p-2 opacity-85 border-none bg-background rounded-full flex items-center justify-center"
       >
         <ShoppingCart
-          :size="24"
           :stroke-width="1.6"
           class="size-5"
         />

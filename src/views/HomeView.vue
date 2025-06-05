@@ -136,12 +136,12 @@ const handleSearch = async (query: string) => {
     class="mt-5"
     :products="newArrivalProducts"
     title="Best Selling"
-    go-to="/all-items"
+    go-to="/products/best-selling"
   />
   <ProductCarousel
     class="mt-5"
     :products="newArrivalProducts"
     title="Special Offers"
-    go-to="/special-offers"
+    go-to="/products/special-offers"
   />
 </template>
